@@ -9,11 +9,6 @@ except:
     import urllib.request
     urlopen = urllib.request.urlopen
 
-try:
-    inspect.signature(Api.minimumBimServerVersion)
-    canInspectSignature = True
-except AttributeError:
-    canInspectSignature = False
 
 class Api:
     """
@@ -24,7 +19,7 @@ class Api:
     Example:
     import bimserver
     client = bimserver.Api(server_address, username, password)
-    client.Bimsie1ServiceInterface.addProject(projectName="My new project")
+    client.ServiceInterface.addProject(projectName="My new project")
     """
 
     token = None
@@ -120,3 +115,8 @@ class Interface:
 class BimserverException(Exception):
     pass
 
+try:
+    inspect.signature(Api.minimumBimServerVersion)
+    canInspectSignature = True
+except AttributeError:
+    canInspectSignature = False
