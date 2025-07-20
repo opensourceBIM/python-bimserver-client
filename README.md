@@ -17,7 +17,7 @@ project_id = client.ServiceInterface.addProject(projectName="My new project", sc
 with open(fn, "rb") as f:
     ifc_data = f.read()
     
-client.ServiceInterface.checkin(
+client.ServiceInterface.checkinSync(
     poid=               project_id,
     comment=            "my first commit",
     deserializerOid=    deserializer_id,
