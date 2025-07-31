@@ -45,10 +45,10 @@ serializer_id = serializer.get('oid')
 roid = projects[0].get('lastRevisionId')
 
 topicId = client.ServiceInterface.download(
-    roids=[roid],
-    serializerOid=serializer_id,
-    query=json.dumps({}),
-    sync='false',
+    roids=         [roid],
+    serializerOid= serializer_id,
+    query=         json.dumps({}),
+    sync=          False
 )
 
 download_url = f"{server_address}/download?token={client.token}&zip=on&topicId={topicId}"
