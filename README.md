@@ -24,8 +24,7 @@ client.ServiceInterface.checkinSync(
     fileSize=           len(ifc_data),
     fileName=           "IfcOpenHouse.ifc",
     data=               base64.b64encode(ifc_data).decode('utf-8'),
-    sync=               "false",
-    merge=              "false"
+    merge=              False
 )
 ```
 
@@ -81,8 +80,8 @@ client.Bimsie1ServiceInterface.checkin(
     fileSize=           len(ifc_data),
     fileName=           "IfcOpenHouse.ifc",
     data=               base64.b64encode(ifc_data).decode('utf-8'),
-        sync=               "false"
-    )
+    sync=               False
+)
 ```
 
 Enable autocompletion in Python 2
